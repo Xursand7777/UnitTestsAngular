@@ -13,7 +13,7 @@ export class CounterComponent {
   constructor(private fb: FormBuilder) {
     this.form = fb.group({
       login: ['', Validators.required],
-      password: ['']
+      email: ['']
     })
   }
 

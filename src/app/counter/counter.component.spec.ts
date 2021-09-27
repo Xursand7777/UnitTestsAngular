@@ -31,4 +31,10 @@ describe('CounterComponent', () => {
     expect(component.form.contains('login')).toBeTruthy()
     expect(component.form.contains('email')).toBeTruthy()
   });
+
+  it('should mark login as invalid if empty value',  () => {
+    const control = component.form.get('login')
+    control?.setValue('')
+    expect(control?.valid).toBeFalsy()
+  });
 })
